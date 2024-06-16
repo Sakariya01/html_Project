@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html project</title>
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container-1 {
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 10px;
+            max-width: 1200px;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .one-btn {
+            background: transparent;
+            padding: 10px;
+            border: 1px solid rgb(7 112 228);
+            border-radius: 50px;
+            color: rgb(7 112 228);
+        }
+
+        .one-btn-1 {
+            background: transparent;
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+            border-radius: 50px;
+            color: black;
+        }
+
+        .one-btn-2 {
+            background: transparent;
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+            border-radius: 50px;
+            color: black;
+        }
+
+
+        .form-tag {
+            width: 90% !important;
+            margin: 0 10px;
+            padding: 20px 10px;
+            background: #f4f5f5;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-col {
+            padding: 0 10px;
+        }
+
+        .form-btn {
+            background: #fc790d;
+            color: #f4f5f5;
+            width: auto;
+            padding: 18px 30px;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .form-box {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .icon-row {
+            width: 100%;
+            display: flex;
+        }
+
+        .icon-coloumn {
+            width: 11.11%;
+            border-right: 1px solid #e1e1e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .icon-coloumn p {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .offer-row {
+            width: 100%;
+            display: flex;
+
+        }
+
+        .offer-box {
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        .offer-box img {
+            width: 100%;
+            border-radius: 14px;
+        }
+
+        .offer-box img:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transition: all 0.05s ease-in-out;
+        }
+
+
+
+        .fare-form-row {
+            width: 100%;
+            display: flex;
+        }
+
+
+
+        .book-btn {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid orange;
+            background: transparent;
+            color: orange;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        .fare-row {
+            display: flex;
+            width: 100%;
+        }
+
+        .login {
+            background: transparent;
+            width: 40px;
+            height: 40px;
+            background-color: #e1e1e1;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            display: block;
+        }
+        .login-box{
+            text-decoration: none!important;
+            color: black;
+        }
+
+        .fare-box {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .fare-box img {
+            border-radius: 10px;
+        }
+
+        .fare-flex {
+            padding-bottom: 10px;
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .login-btn {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-1">
+        <div class="my-4 d-flex justify-content-between">
+            <img src="assets/image/ixigo logo.png" width="85" height="42" alt="Ixigo Logo">
+            <a  class="login-box d-flex align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <span class="login">
+                    &#128100;
+                </span>
+                <span class="ms-2">Log in/Sign up</span>
+                
+            </a>
+            
+        </div>
+        <!-- Login form start -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+                        <div class="card border-0  rounded-3 my-5">
+                            <div class="card-body ">
+                                <h5 class="card-title text-center mb-5 fw-bold fs-5">Log in to ixigo</h5>
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <input type="type" class="form-control " id="mobilenumber"
+                                            placeholder="Enter Mobile Number">
+                                        <label for="mobilenumber">Enter Mobile Number</label>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-seconday btn-login text-uppercase fw-bold
+                                        " type="submit">Continue</button>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-grid mb-3">
+                                        <button class="btn btn-google  box-shadow login-btn">
+                                            <i class="fab fa-google me-2"></i>
+                                            <span>Sign in with Google</span>
+                                        </button>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-facebook  box-shadow login-btn">
+                                            <i class="fab fa-facebook-f me-2"></i> Sign in with Facebook
+                                        </button>
+                                    </div>
+                                    <div class="my-4">
+                                        By proceeding, you agree to our <a href="#">T&C</a> and
+                                        <a href="#">Privacy policy</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login form end -->
+        <hr>
+
+        <div class="my-4">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:60%">
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td style="width:40%"><img src="assets/image/flight.f515b25a.svg" width="80"
+                                                    height="80"></td>
+                                            <td style="width:60%">
+                                                <h5 style="color: #767883;">Flights</h5>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td style="width:40%"><img src="assets/image/hotel.4b63222d.svg" width="80"
+                                                    height="80"></td>
+                                            <td style="width:60%">
+                                                <h5 style="color: #767883;">Hotels</h5>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td style="width:40%"><img src="assets/image/train.d3e3d1e5.svg" width="80"
+                                                    height="80"></td>
+                                            <td style="width:60%">
+                                                <h5 style="color: #767883;">Trains</h5>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td style="width:40%"><img src="assets/image/bus.1942c5dd.svg" width="80"
+                                                    height="80"></td>
+                                            <td style="width:60%">
+                                                <h5 style="color: #767883;">Buses</h5>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:40%" align="right">
+                        <p>Book Flights, Trains, Buses & Hotels
+                        <h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="my-4">
+            <div class="form-box">
+                <table style="width: 100%;">
+                    <tr>
+                        <table style="width:100%" class="my-2">
+                            <td style="width:50%">
+                                <table style="width:40%">
+                                    <tr>
+                                        <td><button class="one-btn">one way</button></td>
+                                        <td><button class="one-btn-1">Round Trip</button></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width:50%;height:50px" align="right">
+                                <marquee style="width:50%;height:16px" behavior='scroll' direction='up' scrollamount='3'
+                                    onmouseover='this.stop()' onmouseout='this.start()'>
+                                    <div style="padding: 10px 0;">
+                                        <span style="color:green">&#9742;</span>
+                                        <span>
+                                            Best Flight Offers
+                                        </span>
+                                    </div>
+                                    <div style="padding: 10px 0;">
+                                        <span style="color:green">&#128077;</span>
+                                        <span>
+                                            Hassle-Free Bookings
+                                        </span>
+                                    </div>
+                                    <div style="padding: 10px 0;">
+                                        <span style="color:green">&#37;
+                                        </span>
+                                        <span>
+                                            24x7 Customer Support
+                                        </span>
+                                    </div>
+                                </marquee>
+                            </td>
+                        </table>
+                    </tr>
+                    <tr>
+                        <table style="width: 100%;" class="my-2">
+                            <tr>
+                                <td style="width: 20%;" class="form-col"><input type="text" class="form-tag"
+                                        placeholder="From">
+                                </td>
+                                <td style="width:20% ;" class="form-col"><input type="text" class="form-tag"
+                                        placeholder="To">
+                                </td>
+                                <td style="width: 10%;" class="form-col"><input type="text" class="form-tag"
+                                        placeholder="01/02/2023"></td>
+                                <td style="width: 10%;" class="form-col"><input type="text" class="form-tag"
+                                        placeholder="Return"></td>
+                                <td style="width: 25%;" class="form-col"><input type="text" class="form-tag"
+                                        placeholder="1 Traveller Economy"></td>
+                                <td style="width:15% ">
+                                    <div class="form-btn">
+                                        <span style="margin-left: 10px;"><b>Search</b></span>
+                                        <span style="margin-left: 10px;">></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </tr>
+                    <tr>
+                        <table style="width:50%">
+                            <tr>
+                                <td>
+                                    <p>Special Fares (Optional) :
+                                    <h2>
+                                </td>
+
+                                <td><button class="one-btn">Student</button></td>
+                                <td><button class="one-btn-1">Senior citizen</button></td>
+                                <td><button class="one-btn-2">Armed Forces</button></td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <h5 class="mb-2">Do More With ixigo
+            </h5>
+            <div class="form-box">
+                <table style="width:100%">
+                    <tr class="icon-row">
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i1.png" alt="icon" width="60" height="60" style="margin: auto;">
+                            <p>Flight Status</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i2.png" alt="icon" width="60" height="60">
+                            <p>Credit Card</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i3.png" alt="icon" width="60" height="60">
+                            <p>Book Visa</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i4.png" alt="icon" width="60" height="60">
+                            <p>Travel Insurance</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i5.png" alt="icon" width="60" height="60">
+                            <p>Plan</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i6.png" alt="icon" width="60" height="60">
+                            <p>Car Rentals</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i7.png" alt="icon" width="60" height="60">
+                            <p>Group Booking</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i8.png" alt="icon" width="60" height="60">
+                            <p>Airport Cabs</p>
+                        </td>
+                        <td class="icon-coloumn">
+                            <img src="assets/image/icon/i9.png" alt="icon" width="60" height="60">
+                            <p>Fare Alerts</p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="my-4">
+            <h5 class="mb-4">Offer for you</h5>
+            <table style="width: 100%;">
+                <tr class="offer-row">
+                    <td class="offer-box"><img src="assets/image/offer/off1.png" alt="offer" width="200" height="200px">
+                    </td>
+                    <td class="offer-box"><img src="assets/image/offer/off2.png" alt="offer" width="200" height="200px">
+                    </td>
+                    <td class="offer-box"><img src="assets/image/offer/off3.png" alt="offer" width="200" height="200px">
+                    </td>
+                    <td class="offer-box"><img src="assets/image/offer/off4.png" alt="offer" width="200" height="200px">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="my-4">
+            <h5 class="mb-4">Cheapest Fares From</h5>
+            <div class="form-box">
+                <div>
+                    <div class="fare-row">
+                        <div class="fare-box">
+                            <div>
+                                <img src="assets/image/city/city1.webp" alt="image" width="300" height="200">
+                            </div>
+                            <div class="fare-flex">
+                                <div>
+                                    <p>Gwalior, Madhya Pradesh</p>
+                                    <small style="color:#767883">Fri, 21 Jun</small>
+                                    <div><b>₹1,195</b> onwards</div>
+                                </div>
+                                <div>
+                                    <button class="book-btn">Book Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fare-box">
+                            <div>
+                                <img src="assets/image/city/city1.webp" alt="image" width="300" height="200">
+                            </div>
+                            <div class="fare-flex">
+                                <div>
+                                    <p>Gwalior, Madhya Pradesh</p>
+                                    <small style="color:#767883">Fri, 21 Jun</small>
+                                    <div><b>₹1,195</b> onwards</div>
+                                </div>
+                                <div>
+                                    <button class="book-btn">Book Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fare-box">
+                            <div>
+                                <img src="assets/image/city/city1.webp" alt="image" width="300" height="200">
+                            </div>
+                            <div class="fare-flex">
+                                <div>
+                                    <p>Gwalior, Madhya Pradesh</p>
+                                    <small style="color:#767883">Fri, 21 Jun</small>
+                                    <div><b>₹1,195</b> onwards</div>
+                                </div>
+                                <div>
+                                    <button class="book-btn">Book Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fare-box">
+                            <div>
+                                <img src="assets/image/city/city1.webp" alt="image" width="300" height="200">
+                            </div>
+                            <div class="fare-flex">
+                                <div>
+                                    <p>Gwalior, Madhya Pradesh</p>
+                                    <small style="color:#767883">Fri, 21 Jun</small>
+                                    <div><b>₹1,195</b> onwards</div>
+                                </div>
+                                <div>
+                                    <button class="book-btn">Book Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
